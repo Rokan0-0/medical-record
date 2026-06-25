@@ -9,6 +9,7 @@ import { LabResults } from "./components/LabResults"
 import { DoctorNotes } from "./components/DoctorNotes"
 import { Login } from "./components/Login"
 import { Home, Users, Calendar, FileText, TestTube, Stethoscope } from "lucide-react"
+import calebLogo from "../assets/caleb_logo.png"
 
 export interface UserSession {
   id: string
@@ -72,8 +73,8 @@ export default function App() {
         <Sidebar className="border-r bg-gradient-to-b from-slate-50 to-blue-50">
           <SidebarHeader className="border-b px-6 py-4 bg-white/80 backdrop-blur-sm">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-lg">
-                <Stethoscope className="h-5 w-5" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden bg-slate-100 shadow-md">
+                <img src={calebLogo} alt="Logo" className="h-full w-full object-cover" />
               </div>
               <div>
                 <h2 className="font-semibold text-slate-800">MediCare EMR</h2>

@@ -5,7 +5,7 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
 import { Lock, User, AlertCircle, Eye, EyeOff } from "lucide-react"
-import calebLogo from "../assets/caleb_logo.png"
+import calebLogo from "../../assets/caleb_logo.png"
 
 interface LoginProps {
   onLogin: (user: {
