@@ -157,7 +157,7 @@ export function MedicalHistory({ user }: MedicalHistoryProps) {
   const getTypeColor = (type: string) => {
     switch (type) {
       case "condition": return "bg-red-100 text-red-800"
-      case "surgery": return "bg-blue-100 text-blue-800"
+      case "surgery": return "bg-emerald-100 text-emerald-800"
       case "allergy": return "bg-yellow-100 text-yellow-800"
       case "medication": return "bg-green-100 text-green-800"
       default: return "bg-gray-100 text-gray-800"
@@ -258,7 +258,7 @@ export function MedicalHistory({ user }: MedicalHistoryProps) {
                   </SelectContent>
                 </Select>
               ) : (
-                <div className="p-3 bg-blue-50/50 border border-blue-100 rounded-lg">
+                <div className="p-3 bg-green-50/50 border border-green-100 rounded-lg">
                   <div className="text-sm font-semibold text-slate-800">{currentPatient?.name}</div>
                   <div className="text-xs text-slate-500 font-mono">{currentPatient?.patientId}</div>
                 </div>
@@ -267,8 +267,8 @@ export function MedicalHistory({ user }: MedicalHistoryProps) {
               {currentPatient && (
                 <div className="space-y-2 pt-4 border-t">
                   <div className="text-sm">
-                    <span className="font-medium text-blue-700">Patient ID:</span> 
-                    <span className="font-mono text-blue-800 ml-1">{currentPatient.patientId}</span>
+                    <span className="font-medium text-green-700">Matric Number:</span> 
+                    <span className="font-mono text-green-800 ml-1">{currentPatient.patientId}</span>
                   </div>
                   <div className="text-sm">
                     <span className="font-medium">DOB:</span> {new Date(currentPatient.dateOfBirth).toLocaleDateString()}
@@ -459,7 +459,7 @@ export function MedicalHistory({ user }: MedicalHistoryProps) {
                     <Card>
                       <CardContent className="p-4">
                         <div className="flex items-center gap-2">
-                          <Activity className="h-5 w-5 text-blue-500" />
+                          <Activity className="h-5 w-5 text-emerald-500" />
                           <div>
                             <p className="text-sm text-muted-foreground">Surgeries</p>
                             <p className="text-xl font-semibold">{filterRecordsByType("surgery").length}</p>

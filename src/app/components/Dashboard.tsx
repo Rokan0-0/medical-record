@@ -94,7 +94,7 @@ export function Dashboard({ onNavigate, user }: DashboardProps) {
 
   const isStudent = user?.role === "student"
   const stats = [
-    { title: isStudent ? "My Total Records" : "Total Patients", value: String(totalPatients), icon: Users, color: "text-blue-600", bgColor: "bg-blue-50" },
+    { title: isStudent ? "My Total Records" : "Total Patients", value: String(totalPatients), icon: Users, color: "text-green-600", bgColor: "bg-green-50" },
     { title: isStudent ? "My Scheduled Appointments" : "Today's Appointments", value: String(todayAppointments), icon: Calendar, color: "text-emerald-600", bgColor: "bg-emerald-50" },
     { title: isStudent ? "My Pending Lab Results" : "Pending Lab Results", value: String(pendingLabs), icon: TestTube, color: "text-amber-600", bgColor: "bg-amber-50" },
     { title: isStudent ? "My Active Cases" : "Active Cases", value: String(activeCases), icon: Activity, color: "text-teal-600", bgColor: "bg-teal-50" }
@@ -107,8 +107,8 @@ export function Dashboard({ onNavigate, user }: DashboardProps) {
           title: "Patient Registration",
           description: "Register new patients and manage personal details",
           icon: Users,
-          color: "bg-blue-50 hover:bg-blue-100 border-blue-200",
-          iconColor: "text-blue-600"
+          color: "bg-green-50 hover:bg-green-100 border-green-200",
+          iconColor: "text-green-600"
         }]
       : []),
     {
@@ -148,7 +148,7 @@ export function Dashboard({ onNavigate, user }: DashboardProps) {
   return (
     <div className="p-6 space-y-8">
       <div className="text-center py-8">
-        <h1 className="mb-3 text-slate-800">Welcome to MediCare EMR</h1>
+        <h1 className="mb-3 text-slate-800">Welcome to CUL Medical Centre</h1>
         <p className="text-slate-600 max-w-2xl mx-auto">
           {isStudent 
             ? `Hello, ${user.full_name}. Access your personal health portal to view your medical history, doctor notes, lab results, and appointments.`

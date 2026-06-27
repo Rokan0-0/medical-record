@@ -38,6 +38,7 @@ interface LabResultsProps {
   user?: {
     role: "admin" | "staff" | "student"
     patient_id?: string
+    full_name?: string
   }
 }
 
@@ -132,7 +133,7 @@ export function LabResults({ user }: LabResultsProps) {
       case "completed": return "bg-green-100 text-green-800"
       case "abnormal": return "bg-yellow-100 text-yellow-800"
       case "critical": return "bg-red-100 text-red-800"
-      case "pending": return "bg-blue-100 text-blue-800"
+      case "pending": return "bg-green-100 text-green-800"
       default: return "bg-gray-100 text-gray-800"
     }
   }
@@ -141,7 +142,7 @@ export function LabResults({ user }: LabResultsProps) {
     switch (status) {
       case "normal": return "text-green-600"
       case "high": return "text-red-600"
-      case "low": return "text-blue-600"
+      case "low": return "text-teal-600"
       case "critical": return "text-red-800 font-semibold"
       default: return "text-gray-600"
     }
@@ -161,7 +162,7 @@ export function LabResults({ user }: LabResultsProps) {
     switch (type) {
       case "blood": return "bg-red-100 text-red-800"
       case "urine": return "bg-yellow-100 text-yellow-800"
-      case "imaging": return "bg-blue-100 text-blue-800"
+      case "imaging": return "bg-teal-100 text-teal-800"
       case "biopsy": return "bg-purple-100 text-purple-800"
       case "other": return "bg-gray-100 text-gray-800"
       default: return "bg-gray-100 text-gray-800"
@@ -234,7 +235,7 @@ export function LabResults({ user }: LabResultsProps) {
                 <p className="text-sm text-muted-foreground">Total Tests</p>
                 <p className="text-2xl font-semibold">{stats.total}</p>
               </div>
-              <TestTube className="h-8 w-8 text-blue-600" />
+              <TestTube className="h-8 w-8 text-green-600" />
             </div>
           </CardContent>
         </Card>

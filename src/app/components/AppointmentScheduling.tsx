@@ -129,8 +129,8 @@ export function AppointmentScheduling({ user }: AppointmentSchedulingProps) {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "scheduled": return "bg-blue-100 text-blue-800"
-      case "confirmed": return "bg-green-100 text-green-800"
+      case "scheduled": return "bg-green-100 text-green-800"
+      case "confirmed": return "bg-emerald-100 text-emerald-800"
       case "completed": return "bg-gray-100 text-gray-800"
       case "cancelled": return "bg-red-100 text-red-800"
       default: return "bg-gray-100 text-gray-800"
@@ -293,12 +293,12 @@ export function AppointmentScheduling({ user }: AppointmentSchedulingProps) {
                 <form onSubmit={handleSubmitAppointment} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="patientId">Patient ID</Label>
+                      <Label htmlFor="patientId">Matric Number</Label>
                       <Input
                         id="patientId"
                         value={newAppointment.patientId}
                         onChange={(e) => setNewAppointment(prev => ({ ...prev, patientId: e.target.value }))}
-                        placeholder="MED-123456-789"
+                        placeholder="e.g. 26/1045"
                         className="font-mono"
                         readOnly={user?.role === "student"}
                         required
@@ -473,7 +473,7 @@ export function AppointmentScheduling({ user }: AppointmentSchedulingProps) {
                             <User className="h-4 w-4 text-muted-foreground" />
                             <span className="font-medium">{appointment.patientName}</span>
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-blue-600 mb-1">
+                          <div className="flex items-center gap-2 text-sm text-green-600 mb-1">
                             <span className="font-mono font-medium">{appointment.patientId}</span>
                           </div>
                           <div className="flex items-center gap-2 text-sm text-muted-foreground">

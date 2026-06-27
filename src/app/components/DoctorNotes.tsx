@@ -137,7 +137,7 @@ export function DoctorNotes({ user }: DoctorNotesProps) {
 
   const getVisitTypeColor = (type: string) => {
     switch (type) {
-      case "consultation": return "bg-blue-100 text-blue-800"
+      case "consultation": return "bg-teal-100 text-teal-800"
       case "follow-up": return "bg-green-100 text-green-800"
       case "emergency": return "bg-red-100 text-red-800"
       case "routine": return "bg-purple-100 text-purple-800"
@@ -149,7 +149,7 @@ export function DoctorNotes({ user }: DoctorNotesProps) {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "completed": return "bg-green-100 text-green-800"
-      case "reviewed": return "bg-blue-100 text-blue-800"
+      case "reviewed": return "bg-teal-100 text-teal-800"
       case "draft": return "bg-yellow-100 text-yellow-800"
       default: return "bg-gray-100 text-gray-800"
     }
@@ -246,7 +246,7 @@ export function DoctorNotes({ user }: DoctorNotesProps) {
                 <p className="text-sm text-muted-foreground">Total Notes</p>
                 <p className="text-2xl font-semibold">{stats.total}</p>
               </div>
-              <FileText className="h-8 w-8 text-blue-600" />
+              <FileText className="h-8 w-8 text-green-600" />
             </div>
           </CardContent>
         </Card>

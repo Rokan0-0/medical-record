@@ -70,15 +70,15 @@ export default function App() {
   return (
     <SidebarProvider>
       <div className="flex h-screen w-full">
-        <Sidebar className="border-r bg-gradient-to-b from-slate-50 to-blue-50">
+        <Sidebar className="border-r bg-gradient-to-b from-slate-50 to-green-50">
           <SidebarHeader className="border-b px-6 py-4 bg-white/80 backdrop-blur-sm">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden bg-slate-100 shadow-md">
                 <img src={calebLogo} alt="Logo" className="h-full w-full object-cover" />
               </div>
               <div>
-                <h2 className="font-semibold text-slate-800">MediCare EMR</h2>
-                <p className="text-xs text-blue-600">Healthcare Management System</p>
+                <h2 className="font-semibold text-slate-800">CUL Medical Centre</h2>
+                <p className="text-xs text-green-600">Healthcare Management System</p>
               </div>
             </div>
           </SidebarHeader>
@@ -94,8 +94,8 @@ export default function App() {
                     variant={isActive ? "default" : "ghost"}
                     className={`w-full justify-start gap-3 h-11 transition-all duration-200 ${
                       isActive 
-                        ? "bg-blue-600 text-white shadow-md hover:bg-blue-700" 
-                        : "text-slate-700 hover:bg-blue-50 hover:text-blue-700"
+                        ? "bg-green-600 text-white shadow-md hover:bg-green-700" 
+                        : "text-slate-700 hover:bg-green-50 hover:text-green-700"
                     }`}
                     onClick={() => setActiveModule(item.id)}
                   >
@@ -111,7 +111,7 @@ export default function App() {
         <SidebarInset className="flex-1">
           <header className="flex h-16 shrink-0 items-center justify-between border-b bg-white/95 backdrop-blur-sm px-4 shadow-sm">
             <div className="flex items-center gap-3">
-              <SidebarTrigger className="text-slate-600 hover:text-blue-600" />
+              <SidebarTrigger className="text-slate-600 hover:text-green-600" />
               <div className="h-4 w-px bg-slate-300" />
               <h1 className="font-semibold text-slate-800">{getCurrentModuleTitle()}</h1>
             </div>
@@ -129,7 +129,7 @@ export default function App() {
               <div className="flex items-center gap-3">
                 <div className="text-right">
                   <p className="text-sm font-semibold text-slate-800">{currentUser.full_name}</p>
-                  <p className="text-[10px] text-blue-600 uppercase font-bold tracking-wider">{currentUser.role}</p>
+                  <p className="text-[10px] text-green-600 uppercase font-bold tracking-wider">{currentUser.role}</p>
                 </div>
                 <Button 
                   variant="outline" 
@@ -147,7 +147,7 @@ export default function App() {
             </div>
           </header>
           
-          <main className="flex-1 overflow-auto bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
+          <main className="flex-1 overflow-auto bg-gradient-to-br from-slate-50 via-green-50/30 to-slate-50">
             {renderActiveModule()}
           </main>
         </SidebarInset>
